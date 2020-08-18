@@ -7,14 +7,51 @@
 //
 
 import UIKit
+import Firebase
+import GoogleSignIn
+import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKCoreKit
+import GoogleMaps
+import GooglePlaces
+
+
+
+
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+    class AppDelegate: UIResponder, UIApplicationDelegate{
+    
+ 
+
+    func sign(_ signIn: GIDSignIn!, didDisconnectWith user: GIDGoogleUser!, withError error: Error!) {
+        // Perform any operations when the user disconnects from app here.
+        // ...
+    }
+    func application(_ application: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any])
+      -> Bool
+    {
+        
+        let handledFB = ApplicationDelegate.shared.application(application, open: url, options: options)
+        let handledGoogle = GIDSignIn.sharedInstance().handle(url)
+        return handledFB || handledGoogle
+        
+    }
 
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        FirebaseApp.configure()
+        // google login
+        GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
+       
+        
+     
+        ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+        GMSServices.provideAPIKey("AIzaSyCzfj795Ltzogw2xUb1kr4XR1eBUH97YPo")
+        GMSPlacesClient.provideAPIKey("AIzaSyCzfj795Ltzogw2xUb1kr4XR1eBUH97YPo")
+
         return true
     }
 
@@ -31,6 +68,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // If any sessions were discarded while the application was not running, this will be called shortly after application:didFinishLaunchingWithOptions.
         // Use this method to release any resources that were specific to the discarded scenes, as they will not return.
     }
+
 
 
 }

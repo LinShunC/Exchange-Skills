@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>236266956287-nevhpnlnavqta45oqc2sh2lgut0chlc7.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.236266956287-nevhpnlnavqta45oqc2sh2lgut0chlc7</string>
+	<key>API_KEY</key>
+	<string>AIzaSyCzfj795Ltzogw2xUb1kr4XR1eBUH97YPo</string>
+	<key>GCM_SENDER_ID</key>
+	<string>236266956287</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>lin.Assignment1</string>
+	<key>PROJECT_ID</key>
+	<string>ios-exchangeskill-app</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ios-exchangeskill-app.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:236266956287:ios:230bfc27de8c03057b33ca</string>
+	<key>DATABASE_URL</key>
+	<string>https://ios-exchangeskill-app.firebaseio.com</string>
+</dict>
+</plist>
